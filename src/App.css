@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form-control {
+  width: 60%;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+
+table {
+	text-align: center;
+	line-height: 40px;
+	border-collapse: separate;
+	border-spacing: 0;
+	margin: 50px auto;
+	border-radius: .25rem;
+	padding: 35px;
+	width: 100%;
+  margin-bottom: 110px;
+}
+
+th{
+  border: 1px solid #acacac;
+}
+
+thead tr .tittleTable {
+	color: rgb(0, 0, 0);
+}
+
+tbody tr:hover {
+	background-color: #acacac;
+	cursor: default;
+}
+
+.contenedor-botones{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.boton{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  background: #213b53;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: .3s ease all;
+  border-radius: 5px;
+}
+
+.boton:hover{
+  background: #ccc;
+}
