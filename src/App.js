@@ -9,7 +9,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import { auth } from './firebase';
 import Data from './pages/Data';
-import almacen from './pages/almacen'
+import almacen from './pages/Almacen'
 
 
 import "../src/App.css"
@@ -40,7 +40,7 @@ function PublicRoute({ component: Component, authenticated, ...rest}) {
       authenticated === false ? (
         <Component {...props} />
       ) : (
-        <Redirect to='/almacen' />
+        <Redirect to='/data' />
         )
     }
     />
@@ -83,6 +83,11 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
+            <PrivateRoute
+              path="/data"
+              authenticated={this.state.authenticated}
+              component={Data}
+            />
             <PrivateRoute
               path="/almacen"
               authenticated={this.state.authenticated}

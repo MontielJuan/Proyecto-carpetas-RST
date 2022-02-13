@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { auth } from "../firebase";
 import firebase  from "../firebase"
 import TablaGastos from "../components/TablaGastos";
 import { SelectCity } from "../components/SelectCity";
+import Header from "../components/Header";
 
 
 const Data = () => {
@@ -45,14 +45,8 @@ const Data = () => {
 
     return (
         <>     
-        <nav className="navbar navbar-expand-sm navbar-light">
-        
-          <a className="p-2 navbar-brand" href="/data" >
-                    
-            Monitoreo de dispositivos
-          </a>
-          <button className="btn btn-dark mr-3" onClick={() => auth().signOut()}>Logout</button>            
-        </nav>
+
+        <Header title="Monitoreo de dispositivos"></Header>
 
         <br></br>
 

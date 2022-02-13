@@ -11,7 +11,7 @@ const HomePage = () => {
                 <h1 className="display-4">Bienvenido</h1>
               </div>
               <div className="mt-4 ">
-                <Link className="btn btn-primary px-5 mr-3" to = "/almacen">Ingresar</Link>
+                <Link className="btn btn-primary px-5 mr-3" to = "/login">Ingresar</Link>
               </div>
             </section>
           </div>
