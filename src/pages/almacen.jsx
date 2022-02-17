@@ -58,11 +58,11 @@ const savingData = async (referencia) => {
 
 const savingDataItems = async (referencia) => {
   const variables = await referencia.listAll();
-  const linke = [];
-  return variables.items.map((data) => {
+  var linke = [];
+  return variables.items.map((data, index) => {
 
     data.getDownloadURL().then((url) => {
-      linke.push(url)
+      linke.push(url);
     })
 
     return {

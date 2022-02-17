@@ -7,14 +7,14 @@ const Tree = ({ data = [] }) => {
     <div className="d-tree">
       <ul className="d-flex d-tree-container flex-column">
         {data.map((tree,index) => (
-          <TreeNode node={tree} key={index}/>
+          <TreeNode node={tree} index={index} key={index}/>
         ))}
       </ul>
     </div>
   );
 };
 
-const TreeNode = ({ node }) => {
+const TreeNode = ({ node, index }) => {
   const [childVisible, setChildVisiblity] = useState(false);
 
   const hasChild = node.children ? true : false;
@@ -35,7 +35,7 @@ const TreeNode = ({ node }) => {
         <div className="col d-tree-head">
           <i className={`mr-1 ${node.icon} ${node.cursor}`}> </i>
           {
-            node.link === undefined ? node.label : <a href={node.link}>{node.label}</a>
+            node.link === undefined ? node.label : <a href={node.link[index]}>{node.label}</a>
           }
 
         </div>
