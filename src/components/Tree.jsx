@@ -34,7 +34,10 @@ const TreeNode = ({ node }) => {
 
         <div className="col d-tree-head">
           <i className={`mr-1 ${node.icon} ${node.cursor}`}> </i>
-          {node.label}
+          {
+            node.link === undefined ? node.label : <a href={node.link}>{node.label}</a>
+          }
+
         </div>
       </div>
 

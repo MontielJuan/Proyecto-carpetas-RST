@@ -58,12 +58,18 @@ const savingData = async (referencia) => {
 
 const savingDataItems = async (referencia) => {
   const variables = await referencia.listAll();
+  const linke = [];
   return variables.items.map((data) => {
+
+    data.getDownloadURL().then((url) => {
+      linke.push(url)
+    })
+
     return {
       path: data.fullPath,
       label: data.name,
+      link: linke,
       icon: "fa fa-file",
-      
     };
   });
 };
@@ -118,12 +124,11 @@ const TreeList = () => {
       const locals = await savingData(firebase.storage().ref("Informes"));
       const dias = await myFunction(locals, "dias", "/Mes");
       const archivos = await myFunction2(dias,"children");
+      console.log(archivos)
       setData(archivos);
     }
     fetchData();
-
     
-
   }, []);
 
   return (
